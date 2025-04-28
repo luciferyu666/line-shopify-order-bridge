@@ -1,12 +1,33 @@
 {
   "version": 2,
+
+  /* ---------- 後端 ---------- */
   "functions": {
     "api/**/*.js": {
       "runtime": "nodejs20.x"
     }
   },
+
+  /* ---------- 前端 ---------- */
+  "builds": [
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist" // vite build 預設輸出
+      }
+    }
+  ],
+
+  /* ---------- 路由 ---------- */
   "routes": [
+    /* API 先攔截 */
     { "src": "/api/(.*)", "dest": "/api/$1.js" },
-    { "src": "/(.*)", "dest": "/frontend/$1" }
+
+    /* 讓 Vercel 先嘗試讀取靜態檔再走 fallback */
+    { "handle": "filesystem" },
+
+    /* SPA fallback：所有其餘路徑交給前端 dist */
+    { "src": "/(.*)", "dest": "/frontend/dist/$1" }
   ]
 }
