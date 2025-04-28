@@ -1,0 +1,40 @@
+{
+  "login": {
+    "title": "客服後台登入",
+    "passwordPlaceholder": "請輸入管理密碼",
+    "loginButton": "登入",
+    "error": "驗證失敗，請重試"
+  },
+  "sidebar": {
+    "orders": "訂單查詢",
+    "richmenu": "Rich Menu 管理",
+    "rebind": "重新綁定",
+    "logout": "登出"
+  },
+  "orders": {
+    "title": "訂單查詢",
+    "emailPlaceholder": "Email",
+    "phonePlaceholder": "手機號碼",
+    "query": "查詢",
+    "noData": "尚無資料",
+    "status": "狀態",
+    "amount": "金額",
+    "logistics": "物流"
+  },
+  "richmenu": {
+    "title": "Rich Menu 管理",
+    "switch": "切換為此"
+  },
+  "rebind": {
+    "title": "重新綁定 / 修改聯絡資訊",
+    "lineIdPlaceholder": "輸入 LINE ID",
+    "query": "查詢",
+    "update": "更新",
+    "success": "✅ 更新完成"
+  },
+  "toast": {
+    "updateSuccess": "已更新",
+    "error": "發生錯誤"
+  },
+  "loading": "載入中..."
+}

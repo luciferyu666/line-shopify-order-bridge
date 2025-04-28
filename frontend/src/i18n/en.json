@@ -1,0 +1,40 @@
+{
+  "login": {
+    "title": "Admin Login",
+    "passwordPlaceholder": "Enter admin password",
+    "loginButton": "Login",
+    "error": "Authentication failed, please try again"
+  },
+  "sidebar": {
+    "orders": "Orders",
+    "richmenu": "Rich Menu",
+    "rebind": "Re‑bind",
+    "logout": "Logout"
+  },
+  "orders": {
+    "title": "Order Search",
+    "emailPlaceholder": "Email",
+    "phonePlaceholder": "Phone number",
+    "query": "Search",
+    "noData": "No data",
+    "status": "Status",
+    "amount": "Amount",
+    "logistics": "Logistics"
+  },
+  "richmenu": {
+    "title": "Rich Menu Manager",
+    "switch": "Switch to this"
+  },
+  "rebind": {
+    "title": "Re‑bind / Update contact",
+    "lineIdPlaceholder": "Enter LINE ID",
+    "query": "Search",
+    "update": "Update",
+    "success": "✅ Update successful"
+  },
+  "toast": {
+    "updateSuccess": "Updated successfully",
+    "error": "An error occurred"
+  },
+  "loading": "Loading..."
+}
