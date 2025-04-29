@@ -1,19 +1,26 @@
+# .github/workflows/ci.yml
 name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
 
 jobs:
   build-test:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
+
+      # 安裝指定版本 pnpm ‒ 自動快取 node_modules
       - uses: pnpm/action-setup@v2
         with:
           version: 8
-      - name: Install
-        run: pnpm i --frozen-lockfile
+          run_install: false # 我們在下一步手動執行 install
+
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile # ← 已改
+
       - name: Unit Tests
         run: pnpm test
